@@ -52,7 +52,7 @@ services:
     env_file:
       - env_values
     ports:
-      - ${PORT}:${PORT}
+      - 3000:3000
     restart: unless-stopped
     volumes:
       - ./logs/:/var/log/crowdecrypt
