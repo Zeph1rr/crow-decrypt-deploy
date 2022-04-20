@@ -6,3 +6,4 @@ DB_PORT=5432
 JWT_SECRET=some_jwt_secret
 ADMIN_PASSWORD=admin
 ADMIN_EMAIL=VityaLoh
+TAG=1.0.0-36
