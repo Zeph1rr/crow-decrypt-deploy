@@ -46,8 +46,8 @@ services:
     networks:
       - crowdecrypt
 
-  back:
-    container_name: back
+  backend:
+    container_name: backend
     image: zeph1rrinc/crowdecrypt-back:${BACK_TAG}
     env_file:
       - env_values
