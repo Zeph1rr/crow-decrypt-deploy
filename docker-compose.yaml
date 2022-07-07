@@ -46,19 +46,25 @@ services:
     networks:
       - crowdecrypt
 
-  app:
-    container_name: app
-    image: zeph1rrio/crowdecrypt:${TAG}
+  back:
+    container_name: back
+    image: zeph1rrinc/crowdecrypt-back:${BACK_TAG}
     env_file:
       - env_values
-    ports:
-      - 3000:3000
     restart: unless-stopped
     volumes:
       - ./logs/:/var/log/crowdecrypt
       - ./uploads:/app/uploads
     networks:
       - crowdecrypt
+  
+  front:
+    container_name: front
+    image: zeph1rrinc/crowdecrypt-front:${FRONT_TAG}
+    restart: unless-stopped
+    networks:
+      - crowdecrypt
+
 
 
 networks:
