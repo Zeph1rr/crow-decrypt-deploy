@@ -3,7 +3,7 @@ version: "2.0"
 
 services:
   postgres:
-    container_name: postgres
+    container_name: crowdecrypt_database
     image: postgres:13.3
     command:
       - "postgres"
@@ -48,7 +48,7 @@ services:
 
   backend:
     container_name: backend
-    image: zeph1rrinc/crowdecrypt-backend:${BACK_TAG}
+    image: zeph1rrinc/crowdecrypt-back:${BACK_TAG}
     env_file:
       - env_values
     restart: unless-stopped
