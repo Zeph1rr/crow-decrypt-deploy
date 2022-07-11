@@ -48,7 +48,7 @@ services:
 
   backend:
     container_name: backend
-    image: zeph1rrinc/crowdecrypt-back:${BACK_TAG}
+    image: zeph1rrinc/crowdecrypt-backend:${BACK_TAG}
     env_file:
       - env_values
     restart: unless-stopped
@@ -60,9 +60,9 @@ services:
     networks:
       - crowdecrypt
   
-  front:
-    container_name: front
-    image: zeph1rrinc/crowdecrypt-front:${FRONT_TAG}
+  frontend:
+    container_name: frontend
+    image: zeph1rrinc/crowdecrypt-frontend:${FRONT_TAG}
     restart: unless-stopped
     depends_on:
       - backend
