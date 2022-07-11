@@ -65,7 +65,7 @@ services:
     image: zeph1rrinc/crowdecrypt-frontend:${FRONT_TAG}
     restart: unless-stopped
     volumes:
-      - ./nginx/default.conf:/etc/nginx/condf.d/default.conf
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - backend
     ports:
